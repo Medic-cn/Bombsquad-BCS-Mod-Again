@@ -1,0 +1,1 @@
+You can drop files in here to mod the game.  See settings/advanced in the game for more info.

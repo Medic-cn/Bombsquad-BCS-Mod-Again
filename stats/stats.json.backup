@@ -1,0 +1,83 @@
+{
+    "startDate": "27-12-2022",
+    "stats": {
+        "pb-IF4VAk4a": {
+            "rank": 1,
+            "name": "pb-IF4VAk4a",
+            "scores": 0,
+            "total_damage": 0.0,
+            "kills": 0,
+            "deaths": 0,
+            "games": 18,
+            "kd": 0.0,
+            "avg_score": 0.0,
+            "aid": "pb-IF4VAk4a",
+            "last_seen": "2022-04-26 17:01:13.715014"
+        },
+        "pb-IF4xV08ZFg==": {
+            "rank": 2,
+            "name": "B-14",
+            "scores": 100,
+            "total_damage": 0.0,
+            "kills": 0,
+            "deaths": 0,
+            "games": 1,
+            "kd": 0.0,
+            "avg_score": 100.0,
+            "last_seen": "2022-12-27 22:31:44.318513",
+            "aid": "pb-IF4xV08ZFg=="
+        },
+        "pb-IF4XV3oqVw==": {
+            "rank": 3,
+            "name": "💊",
+            "scores": 100,
+            "total_damage": 0.0,
+            "kills": 0,
+            "deaths": 0,
+            "games": 2,
+            "kd": 0.0,
+            "avg_score": 50.0,
+            "last_seen": "2022-12-28 16:13:17.459706",
+            "aid": "pb-IF4XV3oqVw=="
+        },
+        "pb-IF49VxBfVA==": {
+            "rank": 4,
+            "name": "𝓢𝒐𝒕𝒕𝒐𝓥𝒐𝒄𝒆",
+            "scores": 0,
+            "total_damage": 0.0,
+            "kills": 0,
+            "deaths": 1,
+            "games": 1,
+            "kd": 0.0,
+            "avg_score": 0.0,
+            "last_seen": "2022-12-28 16:13:17.070818",
+            "aid": "pb-IF49VxBfVA=="
+        },
+        "pb-IF4gVW5eDg==": {
+            "rank": 5,
+            "name": "“萌妹”",
+            "scores": 0,
+            "total_damage": 0.0,
+            "kills": 0,
+            "deaths": 1,
+            "games": 1,
+            "kd": 0.0,
+            "avg_score": 0.0,
+            "last_seen": "2022-12-28 16:13:17.756099",
+            "aid": "pb-IF4gVW5eDg=="
+        },
+        "pb-IF5QU1hbEQ==": {
+            "rank": 0,
+            "name": "Android64206890",
+            "scores": 96,
+            "total_damage": 0,
+            "kills": 0,
+            "deaths": 3,
+            "games": 1,
+            "kd": 0,
+            "avg_score": 0,
+            "last_seen": "2023-01-18 14:20:04.999647",
+            "aid": "pb-IF5QU1hbEQ=="
+        }
+    }
+}

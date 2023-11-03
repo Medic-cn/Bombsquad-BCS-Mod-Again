@@ -1,0 +1,148 @@
+# Released under the MIT License. See LICENSE for details.
+
+#汉化by edMedic
+#QQ2091341667
+#Email：medic163@163.com/edmedic@outlook.com
+#禁止未经授权用于开服
+#授权id：82B51274EA94336EB3D7DDEA4D1E738D
+from .commands import NormalCommands
+from .commands import Management
+from .commands import Fun
+from .commands import Cheats
+from .commands import ZakaraCommandOS
+
+from .Handlers import clientid_to_accountid
+from .Handlers import check_permissions
+from chatHandle.chatFilter import ChatFilter
+from bastd.actor import popuptext
+import ba, _ba
+import setting
+
+from serverData import serverdata
+
+settings = setting.get_settings_data()
+
+
+def command_type(command):
+    """
+    Checks The Command Type
+
+    Parameters:
+        command : str
+
+    Returns:
+        any
+    """
+    if command in ZakaraCommandOS.cmd:
+        return "Zakara"
+    if command in NormalCommands.Commands or command in NormalCommands.CommandAliases:
+        return "Normal"
+
+    if command in Management.Commands or command in Management.CommandAliases:
+        return "Manage"
+
+    if command in Fun.Commands or command in Fun.CommandAliases:
+        return "Fun"
+
+    if command in Cheats.Commands or command in Cheats.CommandAliases:
+        return "Cheats"
+    
+
+
+
+def Command(msg, clientid):
+    """
+    Command Execution
+
+    Parameters:
+        msg : str
+        clientid : int
+
+    Returns:
+        any
+    """
+    command = msg.lower().split(" ")[0].split("/")[1]
+    arguments = msg.lower().split(" ")[1:]
+    accountid = clientid_to_accountid(clientid)
+    if command_type(command) == "Normal":
+        NormalCommands.ExcelCommand(command, arguments, clientid, accountid)
+    
+    elif command_type(command) == "Zakara":
+        if ZakaraCommandOS.runNum == 0:
+#            if command == "启动扎卡拉":
+#                ZakaraCommandOS.cmdCenter(command, arguments, clientid, accountid)
+#            else:
+#                ba.internal.chatmessage(str("扎卡拉系统未授权！请联系服主授权后使用"))
+            ZakaraCommandOS.runcmd(command, arguments, clientid, accountid)
+        if command == "注册喵":
+            pass
+        elif command == "注册":
+            pass
+        elif ZakaraCommandOS.Account.getAccountHas(accountid,clientid) == False:
+            return
+        ZakaraCommandOS.cmdCenter(command, arguments, clientid, accountid)
+
+
+    elif command_type(command) == "Manage":
+        if check_permissions(accountid, command):
+            Management.ExcelCommand(command, arguments, clientid, accountid)
+            _ba.screenmessage("执行成功～ @M", transient=True, clients=[clientid])
+        else:
+            _ba.screenmessage("<你没有权限执行～> @M", transient=True, clients=[clientid])
+
+
+    elif command_type(command) == "Fun":
+        if check_permissions(accountid, command):
+            Fun.ExcelCommand(command, arguments, clientid, accountid)
+            _ba.screenmessage("<执行成功～> @F", transient=True, clients=[clientid])
+        else:
+            _ba.screenmessage("<你没有权限执行～> @F", transient=True, clients=[clientid])
+
+
+    elif command_type(command) == "Cheats":
+        if check_permissions(accountid, command):
+            Cheats.ExcelCommand(command, arguments, clientid, accountid)
+            _ba.screenmessage("<执行成功～> @C", transient=True, clients=[clientid])
+        else:
+            _ba.screenmessage("<你没有权限执行～> @C", transient=True, clients=[clientid])
+
+    if accountid in serverdata.clients:
+        if serverdata.clients[accountid]["isMuted"]:
+            _ba.screenmessage("你被管理员禁言了～", transient=True, clients=[clientid])
+            return None
+    if serverdata.muted:
+        return None
+    if settings["ChatCommands"]["BrodcastCommand"]:
+        return msg
+    return None
+
+
+def QuickAccess(msg, client_id):
+    if msg.startswith(","):
+        name = ""
+        teamid = 0
+        for i in _ba.get_foreground_host_session().sessionplayers:
+            if i.inputdevice.client_id == client_id:
+                teamid = i.sessionteam.id
+                name = i.getname(True)
+
+        for i in _ba.get_foreground_host_session().sessionplayers:
+            if i.sessionteam and teamid == i.sessionteam.id and i.inputdevice.client_id != client_id:
+                _ba.screenmessage(name + ":" + msg[1:], clients=[i.inputdevice.client_id],
+                                  color=(0.3, 0.6, 0.3), transient=True)
+
+        return None
+    elif msg.startswith("."):
+        msg = msg[1:]
+        msgAr = msg.split(" ")
+        if len(msg) > 25 or int(len(msg) / 5) > len(msgAr):
+            _ba.screenmessage("“msg/”这条消息太长了～", clients=[client_id], transient=True)
+            return None
+        msgAr.insert(int(len(msgAr) / 2), "\n")
+        for player in _ba.get_foreground_host_activity().players:
+            if player.sessionplayer.inputdevice.client_id == client_id:
+                pos = player.actor.node.position
+                with _ba.Context(_ba.get_foreground_host_activity()):
+                    popuptext.PopupText(" ".join(msgAr), (pos[0], pos[1] + 1, pos[2])).autoretain()
+                return None
+        return None

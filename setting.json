@@ -1,0 +1,162 @@
+{
+    "whitelist": false,
+    "useV2Account": false,
+    "Anti-IdRevealer": false,
+    "ChatCommands": {
+  	  "BrodcastCommand": true
+    },
+    "textonmap": {
+        "top watermark": "🎉鲨鱼俱乐部🎉\n🌠NapPig🌈",
+        "bottom left watermark": "鲨鱼俱乐部💣\n技术支持:inkMedic😶‍🌫️\n🥳🥳🥳🥳🥳🥳🥳🥳",
+        "center highlights":{
+            "color":[1,0,0],
+            "randomColor":true,
+            "msg":[
+                "🎉鲨鱼俱乐部 \n欢迎你的到来🌚! ",
+                "加入我们的鲨鱼QQ群吧🤤902867245🌟\n",
+                "发送“end”可投票结束本回合♨️\n🎮",
+                "扎卡拉指令系统正式上线！！！🐱\n发送“/注册喵”注册你的账户吧😉",
+                "发送“/我自己喵”查看你的喵喵小档案📧\n发送“/我自己喵 背包”查看你的背包🎒",
+                "发送“/竞猜”，参与竞猜吧~🐒\n竞猜成功可获得小鱼干，失败则会扣除小鱼干哦🐷",
+                "发送“/商店”购买喜欢的商品吧！😏\n更新商店商品请发送“/更新商店”🐵",
+                "发送“/egg”使用喵喵彩蛋🥚🥚\n新人赠送10抽！🚩",
+                "服务器有问题及时找Medic！！！🚩",
+                "请勿刷屏😉",
+                "DarkNight提供服务器技术支持\n扎卡拉指令作者：DarkNight抄袭必究🚩",
+                "Dark⭐Night提供本服务器云服务\n采用炸队服务器自建机房💫\n有意合作请加群527575487",
+                "如果您在游戏中遇见违规玩家欢迎举报！\n加群902867245🚩",
+                "鲨鱼倡导和谐游戏，请不要刷屏、挂机😟\n游戏规则摆在那，请不要独自练习！✨"
+                ]
+        }
+    },
+    "ScoreScreenAnnouncement":{
+        "enable": true,
+        "msg": [
+            "🎉鲨鱼俱乐部 \n欢迎你的到来🌚! ",
+            "加入我们的鲨鱼QQ群吧🤤902867245🌟\n",
+            "发送“end”可投票结束本回合♨️\n🎮",
+            "扎卡拉指令系统正式上线！！！🐱\n发送“/注册喵”注册你的账户吧😉",
+            "发送“/我自己喵”查看你的喵喵小档案📧\n发送“/我自己喵 背包”查看你的背包🎒",
+            "发送“/竞猜”，参与竞猜吧~🐒\n竞猜成功可获得小鱼干，失败则会扣除小鱼干哦🐷",
+            "发送“/商店”购买喜欢的商品吧！😏\n更新商店商品请发送“/更新商店”🐵",
+            "发送“/egg”使用喵喵彩蛋🥚🥚\n新人赠送10抽！🚩",
+            "服务器有问题及时找Medic！！！🚩",
+            "请勿刷屏😉",
+            "DarkNight提供服务器技术支持\n扎卡拉指令作者：DarkNight抄袭必究🚩",
+            "Dark⭐Night提供本服务器云服务\n采用炸队服务器自建机房💫\n有意合作请加群527575487",
+            "如果您在游戏中遇见违规玩家欢迎举报！\n加群902867245🚩",
+            "鲨鱼倡导和谐游戏，请不要刷屏、挂机😟\n游戏规则摆在那，请不要独自练习！✨"]
+    },
+    "statsResetAfterDays":31,
+    "leaderboard":{
+        "enable":true,
+        "barsBehindName":true
+    },
+    "autoNightMode":{
+        "enable":true,
+        "startTime":"18:30",
+        "endTime":"06:00",
+        "fireflies":true,
+        "fireflies_random_color":true
+    },
+    "colorfullMap":true,
+    "playlists":{
+        "team":12345,
+        "ffa":412175,
+        "elim":412172,
+        "soccer":412160,
+        "smash":412151,
+        "ffasmash":412179,
+        "epic":412173
+    },
+    "coopModeWithLessPlayers":{
+        "enable":true,
+        "minPlayerToExitCoop":3
+    },
+    "mikirogQuickTurn":{
+        "enable":false
+    },
+    "colorful_explosions":{
+        "enable":true
+    },
+    "ballistica_web": {
+        "enable":true
+    },
+    "character_chooser":{
+        "enable":true
+    },
+    "custom_characters": {
+        "enable":true
+    },
+    "StumbledScoreScreen":true,
+    "elPatronPowerups":{
+        "enable":true,
+        "settings":{"Powers Gravity": true,
+            "Tank Shield PTG": 96,
+            "Healing Damage PTG": 72,
+            "Powerup Style": "Auto",
+            "Powerup Scale": 1.0,
+            "Powerup Name": true,
+            "Powerup With Shield": true,
+            "Powerup Time": true},
+        "Quantity":{ "Shield": 2,
+             "Punch": 3, "Mine Bombs": 2,
+            "Impact Bombs": 3, "Ice Bombs": 3, "Triple": 3,
+            "Sticky Bombs": 3, "Curse": 1, "Health": 1,
+            "Speed": 2, "Healing Damage": 1, "Goodbye": 2,
+            "Ice Man": 1,"Tank Shield": 1, "Impairment Bombs": 2,
+            "Fire Bombs": 3, "Fly Bombs": 3}
+    },
+    "discordbot":{
+        "enable":false,
+        "token":"<secret-token-here>",
+        "liveChat":true,
+        "liveStatsChannelID":925440043672285205,
+        "logsChannelID":925440079843958834
+    },
+    "discordWebHook": {
+        "enable": false,
+        "webhookURL": "https://discord.com/api/webhooks/82649239/e7s0zyBJIuczXL7_CGSO5WM"
+    },
+    "afk_remover":{
+        "enable":true,
+        "ingame_idle_time_in_secs":60,
+        "kick_idle_from_lobby":true,
+        "lobby_idle_time_in_secs":10
+    },
+    "playermod": {
+        "default_boxing_gloves": true,
+        "default_shield" : true,
+        "default_bomb" : "normal",
+        "default_bomb_count" : 1
+    },
+    "allowTeamChat":true,
+    "allowVotes":true,
+    "allowInGameChat":true,
+    "sameCharacterForTeam":false,
+    "newResultBoard":true,
+    "HostDeviceName":"v1.4",
+    "HostName":"人在做药在看",
+    "ShowKickVoteStarterName":true,
+    "autoTeamBalance": true,
+    "KickVoteMsgType":"chat",
+    "minAgeToChatInHours":0,
+    "minAgeToJoinInHours":0,
+    "maxWarnCount":2,
+    "WarnCooldownMinutes":30,
+    "maxAccountPerIP":6,
+    "maxPlayersPerDevice":3,
+    "warnMsg":"一次警告！!",
+    "afterWarnKickMsg":"警告够了，你被踢了:)",
+    "firstTimeJoinMsg":"欢迎首次来到服务器～",
+    "regularWelcomeMsg":"欢迎回来，",
+    "contributeData": true,
+    "enabletags": true,
+    "enablehptag": true,
+    "enablerank": true,
+    "enablestats": true,
+    "enableHitTexts": true,
+    "enableeffects": true,
+    "enableTop5effects": true,
+    "enableTagAnimation":true
+}
